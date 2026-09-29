@@ -49,3 +49,64 @@ const siteContent = {
 };
 
 /* Kodlar Buradan aşağıya */
+const links = document.querySelectorAll('nav a');
+for (let i = 0; i < links.length; i++) {
+  let index = i + 1;
+  links[i].textContent = siteContent.nav['nav-item-' + index];
+  links[i].classList.add('italic');
+}
+document.querySelectorAll('.cta-text h1')[0].textContent = siteContent.cta.h1;
+document.querySelectorAll('.cta-text button')[0].textContent =
+  siteContent.cta.button;
+
+document.querySelectorAll('.top-content h4')[0].textContent =
+  siteContent['top-content']['left-h4'];
+document.querySelectorAll('.top-content p')[0].textContent =
+  siteContent['top-content']['left-content'];
+
+document.querySelectorAll('.top-content h4')[1].textContent =
+  siteContent['top-content']['right-h4'];
+document.querySelectorAll('.top-content p')[1].textContent =
+  siteContent['top-content']['right-content'];
+
+document.querySelectorAll('.bottom-content h4')[0].textContent =
+  siteContent['bottom-content']['left-h4'];
+
+document.querySelectorAll('.bottom-content p')[0].textContent =
+  siteContent['bottom-content']['left-content'];
+
+document.querySelectorAll('.bottom-content h4')[1].textContent =
+  siteContent['bottom-content']['middle-h4'];
+
+document.querySelectorAll('.bottom-content p')[1].textContent =
+  siteContent['bottom-content']['middle-content'];
+
+document.querySelectorAll('.bottom-content h4')[2].textContent =
+  siteContent['bottom-content']['right-h4'];
+
+document.querySelectorAll('.bottom-content p')[2].textContent =
+  siteContent['bottom-content']['right-content'];
+
+document.querySelectorAll('.contact h4')[0].textContent =
+  siteContent.contact['contact-h4'];
+
+document.querySelectorAll('.contact p')[0].textContent =
+  siteContent['contact']['address'];
+document.querySelectorAll('.contact p')[1].textContent =
+  siteContent['contact']['phone'];
+document.querySelectorAll('.contact p')[2].textContent =
+  siteContent['contact']['email'];
+
+const footers = document.querySelectorAll('footer a')[0];
+footers.classList.add('bold');
+footers.textContent = siteContent['footer']['copyright'];
+
+const image1 = document
+  .getElementById('logo-img')
+  .setAttribute('src', siteContent['images']['logo-img']);
+const image2 = document
+  .getElementById('cta-img')
+  .setAttribute('src', siteContent['images']['cta-img']);
+const image3 = document
+  .getElementById('middle-img')
+  .setAttribute('src', siteContent['images']['accent-img']);
